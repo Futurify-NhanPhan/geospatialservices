@@ -129,7 +129,7 @@ namespace GeospatialServices.Ogc.Wmc
         {
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
-                string strSQL = String.Format("SELECT * FROM {0} WHERE {1}.STIntersects(Geometry::STGeomFromText('{2}',4326)) = 1", this.Table, this.GeometryColumn, queryFeature.ToString());
+                string strSQL = String.Format("SELECT * FROM {0}", this.Table, this.GeometryColumn, queryFeature.ToString());
                 using (SqlDataAdapter adapter = new SqlDataAdapter(strSQL, conn))
                 {
                     conn.Open();
