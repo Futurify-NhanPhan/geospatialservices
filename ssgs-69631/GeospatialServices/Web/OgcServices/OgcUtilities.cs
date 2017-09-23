@@ -60,10 +60,9 @@ public class OgcUtilities
 
         if (context.Request.ServerVariables.AllKeys.Contains(key))
             include = false;
-        else if (key.StartsWith("_"))
+        else if (key==null ||key.StartsWith("_")|| key.StartsWith("."))
             include = false;
-        else if (key.StartsWith("."))
-            include = false;
+       
 
         return include;
 
