@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WFS_Configuration>
+  <FeatureTypeList>
+    <FeatureType>
+      <Name>world_admin</Name>
+      <TableName>na</TableName>
+      <GeometryColumn>geom</GeometryColumn>
+      <FeatureIdColumn>fid</FeatureIdColumn>
+      <ConnectionString>Server=tcp:bluespatialtest.database.windows.net,1433;initial catalog=bluespatialtest;User ID=bluespatialtestsa;Password=futurify@101;</ConnectionString>
+    </FeatureType>
+  </FeatureTypeList>
+</WFS_Configuration>

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<ViewContext xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:sld="http://www.opengis.net/sld" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <General>
+    <Window width="495" height="277" />
+    <BoundingBox SRS="EPSG:3857" minx="175.626027082814" miny="-39.5159274418918" maxx="176.787169321081" maxy="-38.8661569368414" />
+    <Title>Default Map</Title>
+    <KeywordList />
+  </General>
+  <LayerList>
+    <Layer queryable="1" hidden="0">
+      <Name>world_admin</Name>
+      <Title>World Administration Boundaries</Title>
+      <Abstract>World wide geopolitical boundaries</Abstract>
+      <Server service="OGC:WFS" version="1.0.0">
+        <OnlineResource type="simple" href="http://localhost:49241/services.wfs/" />
+      </Server>
+      <SRS>EPSG:4326</SRS>
+      <StyleList>
+        <Style current="1">
+          <Name>default</Name>
+          <SLD>
+            <sld:StyledLayerDescriptor>
+              <sld:UserLayer>
+                <sld:Name>World</sld:Name>
+                <sld:UserStyles>
+                  <sld:UserStyle>
+                    <se:FeatureTypeStyle>
+                      <se:Rule>
+                        <se:PointSymbolizer>
+                          <se:Graphic>
+                            <se:Opacity>255</se:Opacity>
+                            <se:Mark>
+                              <se:WellKnownName>font://Webdings?CharIndex=114</se:WellKnownName>
+                              <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                              </se:Fill>
+                            </se:Mark>
+                            <se:Size>12</se:Size>
+                          </se:Graphic>
+                        </se:PointSymbolizer>
+                        <se:PolygonSymbolizer>
+                          <se:Fill>
+                            <se:SvgParameter name="fill">#2E8C7C</se:SvgParameter>
+                            <se:SvgParameter name="fill-opacity">255</se:SvgParameter>
+                          </se:Fill>
+                          <se:Stroke>
+                            <se:SvgParameter name="stroke">#206055</se:SvgParameter>
+                            <se:SvgParameter name="stroke-opacity">255</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                          </se:Stroke>
+                        </se:PolygonSymbolizer>
+                        <se:LineSymbolizer>
+                          <se:Stroke>
+                            <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                            <se:SvgParameter name="stroke-opacity">255</se:SvgParameter>
+                            <se:SvgParameter name="stroke-dasharray">Solid</se:SvgParameter>
+                            <se:SvgParameter name="stroke-linecap">Flat</se:SvgParameter>
+                            <se:SvgParameter name="stroke-linejoin">Miter</se:SvgParameter>
+                          </se:Stroke>
+                        </se:LineSymbolizer>
+                      </se:Rule>
+                    </se:FeatureTypeStyle>
+                  </sld:UserStyle>
+                </sld:UserStyles>
+              </sld:UserLayer>
+            </sld:StyledLayerDescriptor>
+          </SLD>
+        </Style>
+        <Style current="1">
+          <Name>region</Name>
+          <SLD>
+            <sld:StyledLayerDescriptor>
+              <sld:UserLayer>
+                <sld:Name>World by Region</sld:Name>
+                <sld:UserStyles>
+                  <sld:UserStyle>
+                    <se:FeatureTypeStyle>
+                      <se:Rule>
+                        <se:Name>Asia</se:Name>
+                        <ogc:Filter>
+                          <ogc:PropertyIsEqualTo>
+                            <ogc:PropertyName>region</ogc:PropertyName>
+                            <ogc:Literal>Asia</ogc:Literal>
+                          </ogc:PropertyIsEqualTo>
+                        </ogc:Filter>
+                        <se:PointSymbolizer>
+                          <se:Graphic>
+                            <se:Opacity>0.7</se:Opacity>
+                            <se:Mark>
+                              <se:WellKnownName>font://Webdings?CharIndex=114</se:WellKnownName>
+                              <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                              </se:Fill>
+                            </se:Mark>
+                            <se:Size>12</se:Size>
+                          </se:Graphic>
+                        </se:PointSymbolizer>
+                        <se:PolygonSymbolizer>
+                          <se:Fill>
+                            <se:SvgParameter name="fill">#FF0000</se:SvgParameter>
+                            <se:SvgParameter name="fill-opacity">0.7</se:SvgParameter>
+                          </se:Fill>
+                          <se:Stroke>
+                            <se:SvgParameter name="stroke">#FF0000</se:SvgParameter>
+                            <se:SvgParameter name="stroke-opacity">0.7</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                          </se:Stroke>
+                        </se:PolygonSymbolizer>
+                        <se:LineSymbolizer>
+                          <se:Stroke>
+                            <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                            <se:SvgParameter name="stroke-opacity">0.7</se:SvgParameter>
+                            <se:SvgParameter name="stroke-dasharray">Solid</se:SvgParameter>
+                            <se:SvgParameter name="stroke-linecap">Flat</se:SvgParameter>
+                            <se:SvgParameter name="stroke-linejoin">Miter</se:SvgParameter>
+                          </se:Stroke>
+                        </se:LineSymbolizer>
+                      </se:Rule>
+
+                      <se:Rule>
+                        <se:Name>Others</se:Name>
+                        <ogc:ElseFilter/>
+                        <se:PointSymbolizer>
+                          <se:Graphic>
+                            <se:Opacity>0.7</se:Opacity>
+                            <se:Mark>
+                              <se:WellKnownName>font://Webdings?CharIndex=114</se:WellKnownName>
+                              <se:Fill>
+                                <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                              </se:Fill>
+                            </se:Mark>
+                            <se:Size>12</se:Size>
+                          </se:Graphic>
+                        </se:PointSymbolizer>
+                        <se:PolygonSymbolizer>
+                          <se:Fill>
+                            <se:SvgParameter name="fill">#2E8C7C</se:SvgParameter>
+                            <se:SvgParameter name="fill-opacity">1</se:SvgParameter>
+                          </se:Fill>
+                          <se:Stroke>
+                            <se:SvgParameter name="stroke">#206055</se:SvgParameter>
+                            <se:SvgParameter name="stroke-opacity">1</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                          </se:Stroke>
+                        </se:PolygonSymbolizer>
+                        <se:LineSymbolizer>
+                          <se:Stroke>
+                            <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                            <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+                            <se:SvgParameter name="stroke-opacity">1</se:SvgParameter>
+                            <se:SvgParameter name="stroke-dasharray">Solid</se:SvgParameter>
+                            <se:SvgParameter name="stroke-linecap">Flat</se:SvgParameter>
+                            <se:SvgParameter name="stroke-linejoin">Miter</se:SvgParameter>
+                          </se:Stroke>
+                        </se:LineSymbolizer>
+                      </se:Rule>
+
+                    </se:FeatureTypeStyle>
+                  </sld:UserStyle>
+                </sld:UserStyles>
+              </sld:UserLayer>
+            </sld:StyledLayerDescriptor>
+          </SLD>
+        </Style>
+      </StyleList>
+    </Layer>
+  </LayerList>
+</ViewContext>

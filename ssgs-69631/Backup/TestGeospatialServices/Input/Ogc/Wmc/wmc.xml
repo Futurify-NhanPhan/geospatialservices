@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ViewContext xmlns:se="http://www.opengis.net/se" xmlns:ogc="http://www.opengis.net/ogc" xmlns:sld="http://www.opengis.net/sld" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <General>
+    <Window width="1308" height="977" />
+    <BoundingBox SRS="EPSG:4326" minx="157.808151" miny="-55.3755703975535" maxx="192.204367" maxy="-29.6835956024465" />
+    <KeywordList />
+  </General>
+  <LayerList>
+    <Layer queryable="0" hidden="0">
+      <Name>World</Name>
+      <Server service="OGC:WMS">
+        <OnlineResource />
+      </Server>
+      <DataURL>
+        <OnlineResource type="simple" href="http://mapserv2.esrin.esa.it/cubestor/cubeserv.cgi?VERSION=1.1.0" />
+      </DataURL>
+      <sld:MinScaleDenominator>0</sld:MinScaleDenominator>
+      <sld:MaxScaleDenominator>999999</sld:MaxScaleDenominator>
+      <SRS>EPSG:4326</SRS>
+      <StyleList>
+        <Style current="1">
+          <Name>default</Name>
+          <LegendURL width="16" height="16" format="image/gif">
+            <OnlineResource type="simple" href="http://mapserv2.esrin.esa.it/cubestor/cubeserv.cgi?VERSION=1.1.0&amp;REQUEST=GetLegendIcon&amp;LAYER=WORLD_MODIS_1KM:MapAdmin&amp;SPATIAL_TYPE=RASTER&amp;STYLE=default&amp;FORMAT=image//gif" />
+          </LegendURL>
+          <SLD>
+          
+          	<!-- 1. Named Style (defintion should exist on server) -->
+            <sld:StyledLayerDescriptor>
+              <sld:NamedLayer>
+                <sld:Name>WorldSld</sld:Name>
+                <sld:NamedStyle>
+                  <sld:Name>WorldSld</sld:Name>
+                </sld:NamedStyle>
+              </sld:NamedLayer>
+            </sld:StyledLayerDescriptor>
+            
+           </SLD>
+        </Style>
+      </StyleList>
+    </Layer>
+  </LayerList>
+</ViewContext>

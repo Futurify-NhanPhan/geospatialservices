@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WFS_Configuration>
+  <FeatureTypeList>
+    <FeatureType>
+      <Name>world_admin</Name>
+      <TableName>world_admin</TableName>
+      <GeometryColumn>shape</GeometryColumn>
+      <FeatureIdColumn>fid</FeatureIdColumn>
+      <ConnectionString>Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Projects\GeospatialServices\TestGeospatialServices\Input\Runtime\TestGeospatialServicesDatabase.mdf;Integrated Security=True;User Instance=True</ConnectionString>
+    </FeatureType>
+  </FeatureTypeList>
+</WFS_Configuration>

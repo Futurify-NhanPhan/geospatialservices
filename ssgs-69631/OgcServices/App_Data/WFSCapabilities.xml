@@ -1,0 +1,115 @@
+﻿<?xml version="1.0"?>
+<WFS_Capabilities xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1.0">
+  <ServiceIdentification>
+    <ows:Title>WFS</ows:Title>
+    <ows:Abstract>Web Feature Service</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>mapping</ows:Keyword>
+      <ows:Keyword>online</ows:Keyword>
+    </ows:Keywords>
+    <ows:ServiceType>OGC:WFS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.1.0</ows:ServiceTypeVersion>
+    <ows:Fees>None</ows:Fees>
+    <ows:AccessConstraints>None</ows:AccessConstraints>
+  </ServiceIdentification>
+  <ServiceProvider>
+    <ows:ProviderName>provider</ows:ProviderName>
+    <ows:ServiceContact>
+      <ows:ContactInfo>
+        <ows:Phone>
+          <ows:Fascimile></ows:Fascimile>
+        </ows:Phone>
+        <ows:Address>
+          <ows:DeliveryPoint></ows:DeliveryPoint>
+          <ows:City></ows:City>
+          <ows:PostalCode></ows:PostalCode>
+          <ows:Country></ows:Country>
+          <ows:ElectronicMailAddress></ows:ElectronicMailAddress>
+        </ows:Address>
+        <ows:HoursOfService></ows:HoursOfService>
+      </ows:ContactInfo>
+      <ows:Role>PointOfContact</ows:Role>
+    </ows:ServiceContact>
+  </ServiceProvider>
+  <OperationsMetadata>
+    <ows:Operation ows:name="GetCapabilitites">
+      <ows:DCP>
+        <ows:HTTP>
+          <!--<ows:Get xlink:href="http://localhost:49241/servcies.wfs" />-->
+          <ows:Post />
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter ows:name="AcceptVersions">
+        <ows:Value>1.1.0</ows:Value>
+      </ows:Parameter>
+      <ows:Parameter ows:name="AcceptFormats">
+        <ows:Value>text/xml</ows:Value>
+      </ows:Parameter>
+      <ows:Parameter ows:name="Sections">
+        <ows:Value>ServiceIdentification</ows:Value>
+        <ows:Value>ServiceProvider</ows:Value>
+        <ows:Value>OperationsMetadata</ows:Value>
+        <ows:Value>FeatureTypeList</ows:Value>
+        <ows:Value>ServesGMLObjectTypeList</ows:Value>
+        <ows:Value>Filter_Capabilities</ows:Value>
+      </ows:Parameter>
+    </ows:Operation>
+  </OperationsMetadata>
+  <FeatureTypeList>
+  
+    <FeatureType>
+      <Name>world_admin</Name>
+      <Title>World wide administration boundaries</Title>
+      <Abstract />
+      <ows:Keywords>
+        <ows:Keyword />
+      </ows:Keywords>
+      <DefaultSRS>EPSG:4326</DefaultSRS>
+      <OutputFormats>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+      </OutputFormats>
+      <WGS84BoundingBox crs="EPSG:4326">
+        <ows:LowerCorner>180 -90</ows:LowerCorner>
+        <ows:UpperCorner>-180 90</ows:UpperCorner>
+      </WGS84BoundingBox>
+    </FeatureType>
+
+  </FeatureTypeList>
+  <ServersGMLObjectTypeList>
+    
+    <GMLObjectType>
+      <Name>world_admin</Name>
+      <Title>World wide administration boundaries</Title>
+      <ows:OutputFormats>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+      </ows:OutputFormats>
+    </GMLObjectType>
+
+  </ServersGMLObjectTypeList>
+  
+  <ogc:Filter_Capabilities>
+    <ogc:Spatial_Capabilities>
+      <ogc:GeometryOperands />
+      <ogc:SpatialOperators />
+    </ogc:Spatial_Capabilities>
+    <ogc:Scalar_Capabilities>
+      <ogc:LogicalOperators />
+      <ogc:ComparisonOperators>
+        <ogc:ComparisonOperator>EqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>NotEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>GreaterThan</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>GreaterThanEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>LessThan</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>LessThanEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>Like</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>Between</ogc:ComparisonOperator>
+      </ogc:ComparisonOperators>
+      <ogc:ArithmeticOperators>
+        <ogc:Functions>
+          <ogc:FunctionNames />
+        </ogc:Functions>
+      </ogc:ArithmeticOperators>
+    </ogc:Scalar_Capabilities>
+    <ogc:Id_Capabilities />
+  </ogc:Filter_Capabilities>
+</WFS_Capabilities>

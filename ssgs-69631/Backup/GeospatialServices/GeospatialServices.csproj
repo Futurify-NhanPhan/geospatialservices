@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4FD433D5-7B79-4879-85E8-74B4F977C3F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GeospatialServices</RootNamespace>
+    <AssemblyName>GeospatialServices</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeoJSON\GeoJSON.cs" />
+    <Compile Include="GeoJSON\GeoJSONService.cs" />
+    <Compile Include="GeoJSON\JSON.cs" />
+    <Compile Include="Ogc\Common.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Arithmetic_Operators.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\BBOX.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Between.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Beyond.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Capability.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Comparison_Operators.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Contains.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Crosses.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\DCPType.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\DescribeFeatureType.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Disjoint.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\DWithin.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\EmptyType.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Equals.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\FeatureType.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\FeatureTypeList.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Filter_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\FunctionName.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\FunctionNames.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Functions.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Get.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\GetCapabilities.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\GetFeatureType.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\HTTP.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Intersect.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\LatLongBoundingBox.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Like.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\LockFeature.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Logical_Operators.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\MetadataURL.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\NullCheck.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Operations.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Overlaps.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Post.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Request.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\ResultFormat.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Scalar_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\SchemaDescriptionLanguage.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Service.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Simple_Arithmetic.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Simple_Comparisons.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Spatial_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Spatial_Operators.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Touches.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Transaction.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Wfs.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\WFS_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\1.0.0\Within.cs" />
+    <Compile Include="Ogc\Wfs\Address.cs" />
+    <Compile Include="Ogc\Wfs\ArithmeticOperators.cs" />
+    <Compile Include="Ogc\Wfs\Code.cs" />
+    <Compile Include="Ogc\Wfs\ComparisonOperators.cs" />
+    <Compile Include="Ogc\Wfs\Contact.cs" />
+    <Compile Include="Ogc\Wfs\DCP.cs" />
+    <Compile Include="Ogc\Wfs\Description.cs" />
+    <Compile Include="Ogc\Wfs\Domain.cs" />
+    <Compile Include="Ogc\Wfs\EID.cs" />
+    <Compile Include="Ogc\Wfs\Exception.cs" />
+    <Compile Include="Ogc\Wfs\ExceptionReport.cs" />
+    <Compile Include="Ogc\Wfs\ExtendedCapabilities.cs" />
+    <Compile Include="Ogc\Wfs\FeatureType.cs" />
+    <Compile Include="Ogc\Wfs\FeatureTypeList.cs" />
+    <Compile Include="Ogc\Wfs\FeatureTypeTypeNoSRS.cs" />
+    <Compile Include="Ogc\Wfs\FID.cs" />
+    <Compile Include="Ogc\Wfs\Filter_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\FunctionName.cs" />
+    <Compile Include="Ogc\Wfs\FunctionNames.cs" />
+    <Compile Include="Ogc\Wfs\Functions.cs" />
+    <Compile Include="Ogc\Wfs\GeometryOperands.cs" />
+    <Compile Include="Ogc\Wfs\GMLObjectType.cs" />
+    <Compile Include="Ogc\Wfs\GMLObjectTypeList.cs" />
+    <Compile Include="Ogc\Wfs\HTTP.cs" />
+    <Compile Include="Ogc\Wfs\Id_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\Keywords.cs" />
+    <Compile Include="Ogc\Wfs\LogicalOperators.cs" />
+    <Compile Include="Ogc\Wfs\Metadata.cs" />
+    <Compile Include="Ogc\Wfs\MetadataURL.cs" />
+    <Compile Include="Ogc\Wfs\OnlineResource.cs" />
+    <Compile Include="Ogc\Wfs\Operation.cs" />
+    <Compile Include="Ogc\Wfs\OperationsMetadata.cs" />
+    <Compile Include="Ogc\Wfs\OutputFormatList.cs" />
+    <Compile Include="Ogc\Wfs\RequestMethod.cs" />
+    <Compile Include="Ogc\Wfs\ResponsiblePartySubset.cs" />
+    <Compile Include="Ogc\Wfs\Scalar_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\ServiceIdentification.cs" />
+    <Compile Include="Ogc\Wfs\ServiceProvider.cs" />
+    <Compile Include="Ogc\Wfs\SimpleArithmetic.cs" />
+    <Compile Include="Ogc\Wfs\SpatialOperator.cs" />
+    <Compile Include="Ogc\Wfs\SpatialOperators.cs" />
+    <Compile Include="Ogc\Wfs\Spatial_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\Telephone.cs" />
+    <Compile Include="Ogc\Wfs\Wfs.cs" />
+    <Compile Include="Ogc\Wfs\WfsFault.cs" />
+    <Compile Include="Ogc\Wfs\WFS_Capabilities.cs" />
+    <Compile Include="Ogc\Wfs\WGS84BoundingBox.cs" />
+    <Compile Include="Ogc\Wmc\AnchorPoint.cs" />
+    <Compile Include="Ogc\Wmc\BaseComparisonOps.cs" />
+    <Compile Include="Ogc\Wmc\BoundingBox.cs" />
+    <Compile Include="Ogc\Wmc\Categorize.cs" />
+    <Compile Include="Ogc\Wmc\ChannelSelection.cs" />
+    <Compile Include="Ogc\Wmc\ColorMap.cs" />
+    <Compile Include="Ogc\Wmc\ContactAddress.cs" />
+    <Compile Include="Ogc\Wmc\ContactInformation.cs" />
+    <Compile Include="Ogc\Wmc\ContactPersonPrimary.cs" />
+    <Compile Include="Ogc\Wmc\ContrastEnhancement.cs" />
+    <Compile Include="Ogc\Wmc\Description.cs" />
+    <Compile Include="Ogc\Wmc\Dimension.cs" />
+    <Compile Include="Ogc\Wmc\Displacement.cs" />
+    <Compile Include="Ogc\Wmc\ElseFilter.cs" />
+    <Compile Include="Ogc\Wmc\Expression.cs" />
+    <Compile Include="Ogc\Wmc\Extension.cs" />
+    <Compile Include="Ogc\Wmc\Extent.cs" />
+    <Compile Include="Ogc\Wmc\ExternalGraphic.cs" />
+    <Compile Include="Ogc\Wmc\FeatureTypeConstraint.cs" />
+    <Compile Include="Ogc\Wmc\FeatureTypeStyle.cs" />
+    <Compile Include="Ogc\Wmc\Fill.cs" />
+    <Compile Include="Ogc\Wmc\Filter.cs" />
+    <Compile Include="Ogc\Wmc\Font.cs" />
+    <Compile Include="Ogc\Wmc\Format.cs" />
+    <Compile Include="Ogc\Wmc\General.cs" />
+    <Compile Include="Ogc\Wmc\Geometry.cs" />
+    <Compile Include="Ogc\Wmc\Graphic.cs" />
+    <Compile Include="Ogc\Wmc\GraphicFill.cs" />
+    <Compile Include="Ogc\Wmc\GraphicStroke.cs" />
+    <Compile Include="Ogc\Wmc\Halo.cs" />
+    <Compile Include="Ogc\Wmc\ImageOutline.cs" />
+    <Compile Include="Ogc\Wmc\InlineContent.cs" />
+    <Compile Include="Ogc\Wmc\Interpolate.cs" />
+    <Compile Include="Ogc\Wmc\InterpolationPoint.cs" />
+    <Compile Include="Ogc\Wmc\LabelPlacement.cs" />
+    <Compile Include="Ogc\Wmc\Layer.cs" />
+    <Compile Include="Ogc\Wmc\LinePlacement.cs" />
+    <Compile Include="Ogc\Wmc\LineSymbolizer.cs" />
+    <Compile Include="Ogc\Wmc\Literal.cs" />
+    <Compile Include="Ogc\Wmc\MapItem.cs" />
+    <Compile Include="Ogc\Wmc\Mark.cs" />
+    <Compile Include="Ogc\Wmc\NamedLayer.cs" />
+    <Compile Include="Ogc\Wmc\NamedStyle.cs" />
+    <Compile Include="Ogc\Wmc\OnlineResource.cs" />
+    <Compile Include="Ogc\Wmc\ParameterValue.cs" />
+    <Compile Include="Ogc\Wmc\PointPlacement.cs" />
+    <Compile Include="Ogc\Wmc\PointSymbolizer.cs" />
+    <Compile Include="Ogc\Wmc\PolygonSymbolizer.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsBetween.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsEqualTo.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsGreaterThan.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsGreaterThanEqualTo.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsLessThan.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsLessThanOrEqualTo.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsLike.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsNotEqualTo.cs" />
+    <Compile Include="Ogc\Wmc\PropertyIsNull.cs" />
+    <Compile Include="Ogc\Wmc\RasterSymbolizer.cs" />
+    <Compile Include="Ogc\Wmc\Recode.cs" />
+    <Compile Include="Ogc\Wmc\RemoteOWS.cs" />
+    <Compile Include="Ogc\Wmc\Rule.cs" />
+    <Compile Include="Ogc\Wmc\SelectedChannel.cs" />
+    <Compile Include="Ogc\Wmc\Server.cs" />
+    <Compile Include="Ogc\Wmc\ShadedRelief.cs" />
+    <Compile Include="Ogc\Wmc\SLD.cs" />
+    <Compile Include="Ogc\Wmc\Stroke.cs" />
+    <Compile Include="Ogc\Wmc\Style.cs" />
+    <Compile Include="Ogc\Wmc\StyledLayerDescriptor.cs" />
+    <Compile Include="Ogc\Wmc\SvgParameter.cs" />
+    <Compile Include="Ogc\Wmc\Symbolizer.cs" />
+    <Compile Include="Ogc\Wmc\TextSymbolizer.cs" />
+    <Compile Include="Ogc\Wmc\URL.cs" />
+    <Compile Include="Ogc\Wmc\UserLayer.cs" />
+    <Compile Include="Ogc\Wmc\UserStyle.cs" />
+    <Compile Include="Ogc\Wmc\ViewContext.cs" />
+    <Compile Include="Ogc\Wmc\Window.cs" />
+    <Compile Include="Ogc\Wms\Attribution.cs" />
+    <Compile Include="Ogc\Wms\AuthorityURL.cs" />
+    <Compile Include="Ogc\Wms\BoundingBox.cs" />
+    <Compile Include="Ogc\Wms\Capability.cs" />
+    <Compile Include="Ogc\Wms\ContactAddress.cs" />
+    <Compile Include="Ogc\Wms\ContactInformation.cs" />
+    <Compile Include="Ogc\Wms\ContactPersonPrimary.cs" />
+    <Compile Include="Ogc\Wms\DataURL.cs" />
+    <Compile Include="Ogc\Wms\DCPType.cs" />
+    <Compile Include="Ogc\Wms\Dimension.cs" />
+    <Compile Include="Ogc\Wms\Exception.cs" />
+    <Compile Include="Ogc\Wms\EX_GeographicBoundingBox.cs" />
+    <Compile Include="Ogc\Wms\FeatureListURL.cs" />
+    <Compile Include="Ogc\Wms\Get.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractCurve.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractCurveSegment.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractFeature.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractFeatureBase.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractGeometricAggregate.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractGeometricPrimitive.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractGeometry.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractGML.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractRingProperty.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractSurface.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\AbstractSurfacePatch.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\BoundingShape.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\Code.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\Curve.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\CurveProperty.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\DirectPosition.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\DirectPositionList.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\Envelope.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\Feature.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\FeatureCollection.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\SfGeometry.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\GmlSf.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\LinearRing.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\LineString.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\LineStringSegment.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\MultiCurve.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\MultiGeometry.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\MultiGeometryProperty.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\MultiPoint.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\MultiSurface.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\Point.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\PointProperty.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\Polygon.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\PolygonPatch.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\Surface.cs" />
+    <Compile Include="Ogc\Wms\GmlSf\SurfaceProperty.cs" />
+    <Compile Include="Ogc\Wms\Group.cs" />
+    <Compile Include="Ogc\Wms\HTTP.cs" />
+    <Compile Include="Ogc\Wms\Identifier.cs" />
+    <Compile Include="Ogc\Wms\IdentifierEx.cs" />
+    <Compile Include="Ogc\Wms\Keyword.cs" />
+    <Compile Include="Ogc\Wms\Layer.cs" />
+    <Compile Include="Ogc\Wms\LegendURL.cs" />
+    <Compile Include="Ogc\Wms\LogoURL.cs" />
+    <Compile Include="Ogc\Wms\MetadataURL.cs" />
+    <Compile Include="Ogc\Wms\OnlineResource.cs" />
+    <Compile Include="Ogc\Wms\OperationType.cs" />
+    <Compile Include="Ogc\Wms\Post.cs" />
+    <Compile Include="Ogc\Wms\Request.cs" />
+    <Compile Include="Ogc\Wms\Service.cs" />
+    <Compile Include="Ogc\Wms\ServiceException.cs" />
+    <Compile Include="Ogc\Wms\ServiceExceptionReport.cs" />
+    <Compile Include="Ogc\Wms\Style.cs" />
+    <Compile Include="Ogc\Wms\StyleSheetURL.cs" />
+    <Compile Include="Ogc\Wms\StyleURL.cs" />
+    <Compile Include="Ogc\Wms\UserDefinedSymbolization.cs" />
+    <Compile Include="Ogc\Wms\Wms.cs" />
+    <Compile Include="Ogc\Wms\WmsFault.cs" />
+    <Compile Include="Ogc\Wms\WMS_Capabilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\AbstractGML.cs" />
+    <Compile Include="Runtime\BoundingBox.cs" />
+    <Compile Include="Runtime\FeatureCollection.cs" />
+    <Compile Include="Runtime\FeatureDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Runtime\Layer.cs" />
+    <Compile Include="Runtime\ViewContext.cs" />
+    <Compile Include="Web\OgcServices\OgcUtilities.cs" />
+    <Compile Include="Web\OgcServices\WfsService.cs" />
+    <Compile Include="Web\OgcServices\WmsService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
